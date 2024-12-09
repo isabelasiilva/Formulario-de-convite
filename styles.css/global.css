@@ -38,12 +38,20 @@ body {
   display: grid;
   grid-template-columns: 36% 64%;
   height: 100vh;
+
+  background-color: var(--shape-background);
 }
+
 
 aside {
   background-image: url(../assets/background-cake.svg);
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
+  background-position: bottom;
+
+  border-radius: 12px;
+
+  margin: 20px;
 
   #aside-text {
     margin: 32px auto auto 32px;
@@ -53,8 +61,10 @@ aside {
     font: var(--logo);
     color: #FF598B;
   }
+
   p {
     font: var(--body-md);
     color: var(--text-heading);
   }
 }
+

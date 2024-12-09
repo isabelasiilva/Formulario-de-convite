@@ -1,24 +1,82 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Festivite</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Festivite</title>
 
-    <link rel="stylesheet" href="styles.css/index.css">
-    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&family=Leckerli+One&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css/index.css">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&family=Leckerli+One&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+    rel="stylesheet">
 </head>
-<body>
-    <aside>
-        <div id="aside-text">
-            <img src="assets/emoji-festa.svg" alt="emoji festivo">
-            <h1>Festivite</h1>
-            <p>Crie um convite digital para o seu evento</p>
-        </div>
-    </aside>
 
-    <main></main>
+<body>
+  <aside>
+    <div id="aside-text">
+      <img src="assets/emoji-festa.svg" alt="emoji festivo">
+      <h1>Festivite</h1>
+      <p>Crie um convite digital para o seu evento</p>
+    </div>
+  </aside>
+
+  <main>
+    <h1>Crie seu convite</h1>
+
+    <form action="">
+      <fieldset id="sobre">
+        <legend><img src="assets/icons/calendario.svg" alt="">Sobre o evento</legend>
+
+        <div class="form-box">
+          <label for="titulo">Título</label>
+          <input type="text" placeholder="Nome do evento">
+        </div>
+
+        <div class="grid">
+          <div class="form-box">
+            <label for="inicio">Início</label>
+            <input type="text" placeholder="DD/MM/AAAA, --:--">
+          </div>
+
+          <div class="form-box">
+            <label for="fim">Fim</label>
+            <input type="text" placeholder="DD/MM/AAAA, --:--">
+          </div>
+        </div>
+
+        <div class="grid">
+          <div id="tipo">
+            <label for="tipo">Tipo</label>
+            <div class="grid">
+              <div class="form-box">
+                <input type="radio" name="tipo" id="">
+                <label value="presencial"><img src="assets/icons/presencialdefault.svg" alt="">Presencial</label>
+              </div>
+
+              <div class="form-box">
+                <input type="radio" name="tipo" id="">
+                <label value="online"><img src="assets/icons/onlinedefault.svg" alt=""> Online</label>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-box">
+            <label for="local">Local</label>
+            <input type="text" placeholder="Link ou endereço">
+          </div>
+        </div>
+
+        <div class="form-box">
+          <label for="descricao">Descrição</label>
+          <textarea name="" id="" rows="8" placeholder="Escreva sobre os detalhes do evento"></textarea>
+        </div>
+      </fieldset>
+    </form>
+
+  </main>
 </body>
+
 </html>
