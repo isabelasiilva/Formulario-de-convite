@@ -48,19 +48,24 @@
         </div>
 
         <div class="grid">
-          <div id="tipo">
+          <div id="tipo-wrapping">
             <label for="tipo">Tipo</label>
-            <div class="grid">
-              <div class="form-box">
-                <input type="radio" name="tipo" id="">
-                <label value="presencial"><img src="assets/icons/presencialdefault.svg" alt="">Presencial</label>
-              </div>
 
+            <div class="grid" id="tipo">
               <div class="form-box">
-                <input type="radio" name="tipo" id="">
-                <label value="online"><img src="assets/icons/onlinedefault.svg" alt=""> Online</label>
+                <input type="radio" name="tipo" id="presencial" value="presencial">
+                <label for="presencial">
+                  <img src="assets/icons/presencialdefault.svg" alt=""> Presencial
+                </label>
               </div>
-            </div>
+            
+              <div class="form-box">
+                <input type="radio" name="tipo" id="online" value="online">
+                <label for="online">
+                  <img src="assets/icons/onlinedefault.svg" alt=""> Online
+                </label>
+              </div>
+            </div>            
           </div>
 
           <div class="form-box">
