@@ -16,14 +16,45 @@
   --text-heading: #F9F9F9;
 
   --font-leckerli: "Leckerli One", serif;
-  --logo: 400 2.5rem/auto var(--font-leckerli);
+  --logo: 400 2.5rem var(--font-leckerli);
 
   --font-baloo: "Baloo 2", serif;
-  --heading-md: 700 1.75rem/auto var(--font-baloo);
-  --heading-sm: 700 1.125rem/auto var(--font-baloo);
+  --heading-md: 700 1.75rem var(--font-baloo);
+  --heading-sm: 700 1.125rem var(--font-baloo);
 
   --open-sans: "Open Sans", sans-serif;
-  --body-md: 400 1rem/auto var(--open-sans);
-  --body-sm: 400 .875rem/auto var(--open-sans);
-  --body-xs: 400 .75rem/auto var(--open-sans);
+  --body-md: 300 1rem var(--open-sans);
+  --body-sm: 400 .875rem var(--open-sans);
+  --body-xs: 400 .75rem var(--open-sans);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  grid-template-columns: 36% 64%;
+  height: 100vh;
+}
+
+aside {
+  background-image: url(../assets/background-cake.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  #aside-text {
+    margin: 32px auto auto 32px;
+  }
+
+  h1 {
+    font: var(--logo);
+    color: #FF598B;
+  }
+  p {
+    font: var(--body-md);
+    color: var(--text-heading);
+  }
 }
