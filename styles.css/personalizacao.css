@@ -1,0 +1,160 @@
+#cores {
+  display: flex;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+#brandlight, #navy, #purple, #fuschia, #pink, #orange, #yellow, #lime, #green, #cyan {  
+  input[type="radio"] {
+    appearance: none;
+    cursor: pointer;
+    /* background-color: blue; */
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    border: 6px solid var(--shape-button);
+    margin-bottom: 5px;
+
+    &:hover {
+      border-color: var(--shape-hover);
+    }
+
+    &:checked {
+      outline: 2px solid var(--brand-light);
+    }
+  }
+}
+
+#brandlight input[type="radio"] {
+  background-color: var(--brand-light);
+}
+
+#navy input[type="radio"] {
+  background-color: #6A59FF;
+}
+
+#purple input[type="radio"] {
+  background-color: #B259FF;
+}
+
+#fuschia input[type="radio"] {
+  background-color: #FF59F9;
+}
+
+#pink input[type="radio"] {
+  background-color: #FF598B;
+}
+
+#orange input[type="radio"] {
+  background-color: #FF8B59;
+}
+
+#yellow input[type="radio"] {
+  background-color: #FFCD59;
+}
+
+#lime input[type="radio"] {
+  background-color: #E1FF59;
+}
+
+#green input[type="radio"] {
+  background-color: #59FF91;
+}
+
+#cyan input[type="radio"] {
+  background-color: #59FFF9;
+}
+
+#tema-wrapping {
+  margin-bottom: 28px;
+}
+
+#tema {
+  margin-top: 16px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+
+  &> div {
+    background-color: var(--shape-button);
+    border: solid 1px var(--shape-hover);
+    border-radius: 8px;
+
+    text-align: center;
+
+    img {
+      margin: 4px;
+    }
+
+    p, label {
+      font: var(--body-sm);
+      color: var(--text-heading);
+      padding-block: 8px;
+    }
+  }
+
+  input[type="radio"] {
+    display: none;
+    cursor: pointer;
+
+  }
+}
+
+#wrapping-estilo #estilo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+
+  font: var(--body-sm);
+  color: var(--text-heading);
+
+  button {
+    background-color: var(--input-base);
+    border: solid 1px var(--input-stroke);
+    border-radius: 999px;
+    width: 64px;
+    height: 32px;
+    padding-inline: 4px;
+
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    cursor: pointer;
+
+    div {
+      background-color: var(--input-stroke);
+      border-radius: 99px;
+      width: 24px;
+      height: 24px;
+    }
+}
+
+/* Estado ativo do botao estilo*/
+button.active {
+  flex-direction: row-reverse;
+  background-color: var(--brand-light);
+}
+
+button.active div {
+  background-color: var(--text-heading);
+}
+
+}
+
+#file {
+  background-color: var(--shape-button);
+  border-radius: 8px;  
+  cursor: pointer;
+  width: 119px;
+  height: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  input[type="file"] {
+    display: none;
+  }
+}

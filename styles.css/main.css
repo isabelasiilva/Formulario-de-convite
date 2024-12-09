@@ -70,13 +70,13 @@ main {
   h1 {
     font: var(--heading-md);
     color: var(--text-heading);
-    margin-bottom: 40px;
   }
 
   fieldset {
     border: none;
     display: grid;
     gap: 16px;
+    margin-top: 50px;
 
     legend {
       display: inline-flex;
@@ -101,3 +101,4 @@ main {
     resize: none;
   }
 }
+

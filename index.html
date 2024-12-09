@@ -58,14 +58,14 @@
                   <img src="assets/icons/presencialdefault.svg" alt=""> Presencial
                 </label>
               </div>
-            
+
               <div class="form-box">
                 <input type="radio" name="tipo" id="online" value="online">
                 <label for="online">
                   <img src="assets/icons/onlinedefault.svg" alt=""> Online
                 </label>
               </div>
-            </div>            
+            </div>
           </div>
 
           <div class="form-box">
@@ -79,9 +79,143 @@
           <textarea name="" id="" rows="8" placeholder="Escreva sobre os detalhes do evento"></textarea>
         </div>
       </fieldset>
+
+      <fieldset id="personalizacao">
+        <legend><img src="assets/icons/pincel.svg" alt="">Personalização</legend>
+
+        <div id="cores-wrapping">
+          <label for="">Cor principal</label>
+          <div id="cores">
+            <div id="brandlight">
+              <input type="radio" name="cor" id="">
+            </div>
+            <div id="navy">
+              <input type="radio" name="cor" id="">
+            </div>
+            <div id="purple">
+              <input type="radio" name="cor" id="">
+            </div>
+            <div id="fuschia">
+              <input type="radio" name="cor" id="">
+            </div>
+            <div id="pink">
+              <input type="radio" name="cor" id="">
+            </div>
+            <div id="orange">
+              <input type="radio" name="cor" id="">
+            </div>
+            <div id="yellow">
+              <input type="radio" name="cor" id="">
+            </div>
+            <div id="lime">
+              <input type="radio" name="cor" id="">
+            </div>
+            <div id="green">
+              <input type="radio" name="cor" id="">
+            </div>
+            <div id="cyan">
+              <input type="radio" name="cor" id="">
+            </div>
+          </div>
+        </div>
+
+        <div id="tema-wrapping">
+          <label for="">Tema do evento</label>
+          <div id="tema">
+            <div>
+              <img src="assets/aniversario.svg" alt="">
+              <p>Aniversário</p>
+            </div>
+            <div>
+              <img src="assets/infantil.svg" alt="">
+              <p>Infantil</p>
+            </div>
+            <div>
+              <img src="assets/formatura.svg" alt="">
+              <p>Formatura</p>
+            </div>
+            <div>
+              <img src="assets/casamento.svg" alt="">
+              <p>Casamento</p>
+            </div>
+            <div>
+              <img src="assets/chadebebe.svg" alt="">
+              <p>Chá de bebê</p>
+            </div>
+            <div>
+              <img src="assets/chadepanela.svg" alt="">
+              <p>Chá de panela</p>
+            </div>
+            <div>
+              <img src="assets/carnaval.svg" alt="">
+              <p>Carnaval</p>
+            </div>
+            <div>
+              <img src="assets/pascoa.svg" alt="">
+              <p>Páscoa</p>
+            </div>
+            <div>
+              <img src="assets/saojoao.svg" alt="">
+              <p>São João</p>
+            </div>
+            <div>
+              <img src="assets/halloween.svg" alt="">
+              <p>Halloween</p>
+            </div>
+            <div>
+              <img src="assets/natal.svg" alt="">
+              <p>Natal</p>
+            </div>
+            <div>
+              <img src="assets/outro.svg" alt="">
+              <p>Outro</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid">
+          <div class="form-box" id="wrapping-estilo">
+            <label for="estilo">Estilo</label>
+
+            <div class="form-box" id="estilo">
+              <button type="button" id="toggleButton">
+                <div></div>
+              </button>
+              <p id="toggleText">Escuro</p>
+            </div>
+          </div>
+
+          <div class="form-box">
+            <label for="">Foto de capa</label>
+            <label for="arquivo">
+              <div id="file">
+                <img src="assets/icons/upload.svg" alt="">Selecionar
+                <input type="file" name="" id="arquivo">
+              </div>
+              <p>Nenhum arquivo selecionado</p>
+            </label>
+          </div>
+        </div>
+      </fieldset>
     </form>
 
   </main>
+
+  <script>
+    const button = document.getElementById("toggleButton");
+    const text = document.getElementById("toggleText");
+
+    button.addEventListener("click", () => {
+      button.classList.toggle("active");
+
+      // Substitui o texto do elemento toggleText
+      if (text.textContent.includes("Escuro")) {
+        text.textContent = text.textContent.replace("Escuro", "Claro");
+      } else {
+        text.textContent = text.textContent.replace("Claro", "Escuro");
+      }
+    });
+  </script>
 </body>
 
 </html>
