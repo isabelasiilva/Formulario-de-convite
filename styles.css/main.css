@@ -24,41 +24,57 @@ main {
   }
 
   #tipo {
-    background-color: var(--input-base);
-    border: 1px solid var(--input-stroke);
-    border-radius: 8px;
-    margin-top: 12px;
-    height: 48px;
-    gap: 0;
+      display: flex;
+      background-color: var(--input-base);
+      border: 1px solid var(--input-stroke);
+      border-radius: 8px;
+      margin-top: 12px;
+      
+      overflow: hidden; /* Garante bordas arredondadas sem conteúdo escapando */
+      height: 48px;
+      gap: 0;
 
     .form-box {
-      padding: 10px;
+      flex: 1; /* Cada botão ocupa o mesmo espaço */
     }
-   
+    
     input[type="radio"] {
-      display: none;
-     
-
-      &:checked+label {
-        background-color: var(--shape-hover);
-        border-radius: 5px;
-      }
+      display: none; /* Oculta o botão padrão */
     }
-
+    
     label {
       display: flex;
       align-items: center;
-      gap: 8px;
-
-      img {
-        width: 20px;
-        height: 20px;
-      }
-    }
-
-    & :hover {
+      justify-content: center;
+      margin: 0;
+      height: 100%;
       cursor: pointer;
+      font: var(--body-sm);
+      color: var(--text-body);
+      background-color: var(--input-base);
     }
+    
+    input[type="radio"]:checked + label {
+      background-color: var(--shape-hover); /* Cor de fundo do botão ativo */
+      color: var(--text-heading); /* Cor do texto ativo */
+      margin: 2px;
+      border-radius: 5px;
+    }
+    
+    label img {
+      width: 20px;
+      height: 20px;
+      transition: all 0.3s;
+      margin-right: 5px;
+    }
+    
+    input[type="radio"]#presencial:checked + label img {
+      content: url("../assets/icons/presencialselected.svg"); /* Imagem para estado checked */
+    }
+    
+    input[type="radio"]#online:checked + label img {
+      content: url("../assets/icons/onlineselected.svg"); /* Imagem para estado checked */
+    }  
   }
 
   label {
@@ -101,4 +117,3 @@ main {
     resize: none;
   }
 }
-

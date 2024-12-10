@@ -4,7 +4,16 @@
   margin-top: 16px;
 }
 
-#brandlight, #navy, #purple, #fuschia, #pink, #orange, #yellow, #lime, #green, #cyan {  
+#brandlight,
+#navy,
+#purple,
+#fuschia,
+#pink,
+#orange,
+#yellow,
+#lime,
+#green,
+#cyan {
   input[type="radio"] {
     appearance: none;
     cursor: pointer;
@@ -75,28 +84,35 @@
   grid-template-columns: repeat(4, 1fr);
   gap: 8px;
 
-  &> div {
+  .radio-group {
+    text-align: center;
+  }
+  
+  label {
+    display: inline-block;
+    cursor: pointer;
+  }
+  
+  input[type="radio"] {
+    display: none;
+  }
+  
+  .custom-radio {
     background-color: var(--shape-button);
     border: solid 1px var(--shape-hover);
     border-radius: 8px;
-
+    padding: 8px;
     text-align: center;
-
-    img {
-      margin: 4px;
-    }
-
-    p, label {
-      font: var(--body-sm);
-      color: var(--text-heading);
-      padding-block: 8px;
-    }
+    transition: background-color 0.3s, border-color 0.3s;
   }
-
-  input[type="radio"] {
-    display: none;
-    cursor: pointer;
-
+  
+  input[type="radio"]:checked + .custom-radio {
+    background-color: var(--shape-hover);   
+    border-color: var(--brand-light);
+  }
+  
+  .custom-radio:hover {
+    background-color: var(--shape-hover); 
   }
 }
 
@@ -128,23 +144,23 @@
       width: 24px;
       height: 24px;
     }
-}
+  }
 
-/* Estado ativo do botao estilo*/
-button.active {
-  flex-direction: row-reverse;
-  background-color: var(--brand-light);
-}
+  /* Estado ativo do botao estilo*/
+  button.active {
+    flex-direction: row-reverse;
+    background-color: var(--brand-light);
+  }
 
-button.active div {
-  background-color: var(--text-heading);
-}
+  button.active div {
+    background-color: var(--text-heading);
+  }
 
 }
 
 #file {
   background-color: var(--shape-button);
-  border-radius: 8px;  
+  border-radius: 8px;
   cursor: pointer;
   width: 119px;
   height: 40px;

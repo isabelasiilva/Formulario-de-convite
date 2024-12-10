@@ -37,7 +37,7 @@
 body {
   display: grid;
   grid-template-columns: 36% 64%;
-  height: 100vh;
+  /* height: 100vh; */
   max-width: 1280px;
   margin-inline: auto;
   background-color: var(--shape-background);
@@ -45,6 +45,8 @@ body {
 
 
 aside {
+  max-height: 728px;
+
   background-image: url(../assets/background-cake.svg);
   background-repeat: no-repeat;
   background-size: cover;
