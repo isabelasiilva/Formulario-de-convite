@@ -26,7 +26,7 @@
   <main>
     <h1>Crie seu convite</h1>
 
-    <form action="">
+    <form action="" enctype=”multipart/fomr-data”>
       <fieldset id="sobre">
         <legend><img src="assets/icons/calendario.svg" alt="">Sobre o evento</legend>
 
@@ -231,7 +231,7 @@
                   Outro
                 </div>
               </label>
-            </div>           
+            </div>
           </div>
         </div>
 
@@ -247,18 +247,72 @@
             </div>
           </div>
 
-          <div class="form-box">
+          <!-- <div class="form-box">
             <label for="">Foto de capa</label>
             <label for="arquivo">
               <div id="file">
                 <img src="assets/icons/upload.svg" alt="">Selecionar
                 <input type="file" name="" id="arquivo">
               </div>
-              <p>Nenhum arquivo selecionado</p>
+            </label>
+          </div> -->
+
+          <div class="form-box">
+            <label for="">Foto de capa</label>
+            <label id="custom-file">
+              <input type="file" id="arquivo">
+              <span>
+                <img src="assets/icons/upload.svg" alt="">Selecionar
+              </span>
             </label>
           </div>
+
         </div>
       </fieldset>
+
+      <fieldset id="dados">
+        <legend><img src="assets/icons/contato.svg" alt="">Dados para contato</legend>
+
+        <div class="form-box">
+          <label for="titulo">Nome</label>
+          <input id="nome" type="text" placeholder="Nome completo" required oninvalid="">
+        </div>
+
+        <div class="grid">
+          <div class="form-box">
+            <label for="inicio">Email</label>
+            <input type="text" placeholder="exemplo@email.com">
+          </div>
+
+          <div class="form-box">
+            <label for="fim">Telefone</label>
+            <input type="text" placeholder="(99) 99999-9999 ">
+          </div>
+        </div>
+        </div>
+      </fieldset>
+
+      <section id="checkbox">
+        <div id="termos">
+          <input type="checkbox" name="" id="" checked required>
+          <span>Li e concordo com os <a href="#">Termos e Condições</a> e com a <a href="#">Política de Privacidade</a></span>         
+        </div>
+
+        <div id="promo">
+          <input type="checkbox" name="" id="">
+          <span>Aceito receber atualizações e promoções por e-mail</span>
+        </div>
+
+        <div id="sms">
+          <input type="checkbox" name="" id="">
+          <span>Aceito receber atualizações e promoções por SMS</span>
+        </div>        
+      </section>
+
+      <button type="submit">
+        <img src="assets/icons/convite.svg" alt="">
+        <span>Gerar convite</span>
+      </button>
     </form>
 
   </main>
